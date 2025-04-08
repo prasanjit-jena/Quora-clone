@@ -19,8 +19,8 @@ This Django project replicates the core functionality of a Q&A website inspired 
    git clone  https://github.com/prasanjit-jena/Quora-clone.git
 
 2. **Create and Activate a Virtual Environment**
-python -m venv venv
-source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+python -m venv myenv
+source myenv/bin/activate  # On Windows use `myenv\Scripts\activate`
 
 3. **Install Dependencies**
 pip install -r requirements.txt
