@@ -16,8 +16,7 @@ This Django project replicates the core functionality of a Q&A website inspired 
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-username/quora-clone.git
-   cd quora-clone
+   git clone  https://github.com/prasanjit-jena/Quora-clone.git
 
 2. **Create and Activate a Virtual Environment**
 python -m venv venv
