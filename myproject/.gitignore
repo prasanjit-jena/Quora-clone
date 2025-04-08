@@ -1,0 +1,10 @@
+myenv/
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+**/migrations/*.py
+**/migrations/*.pyc
+!**/migrations/__init__.py

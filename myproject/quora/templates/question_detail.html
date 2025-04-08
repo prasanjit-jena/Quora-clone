@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ object.text }}{% endblock %}
+
+{% block content %}
+    <h2>{{ object.text }}</h2>
+    <p>Asked by {{ object.user.username }} on {{ object.created_at }}</p>
+    <h3>Answers</h3>
+    <ul>
+        {% for answer in object.answers.all %}
+            <li>
+                {{ answer.text }} by {{ answer.user.username }} on {{ answer.created_at }}
+                <form method="post" action="{% url 'like_answer' answer.pk %}">
+                    {% csrf_token %}
+                    <button type="submit">Like</button> ({{ answer.likes.count }} likes)
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+    {% if user.is_authenticated %}
+        <a href="{% url 'answer_question' object.pk %}">Answer this question</a>
+    {% endif %}
+{% endblock %}
